@@ -6,7 +6,10 @@ Uses Docker Compose + LocalStack to simulate AWS services entirely on your machi
 **Author**: Chetan Agrawal  
 **Website**: [www.awswithchetan.com](https://www.awswithchetan.com)
 
-> For AWS deployment, see the [ecommerce-web-app](https://github.com/YOUR_USERNAME/ecommerce-web-app) repo.
+## AWS Architecture
+<img width="800" height="450" alt="project-architecture" src="https://github.com/user-attachments/assets/b08a6351-e907-49aa-8c4b-4a796e301c15" />
+
+## Local deployment Architecture
 
 ## What's Included
 
@@ -21,7 +24,7 @@ Uses Docker Compose + LocalStack to simulate AWS services entirely on your machi
 ### 1. Prerequisites
 
 ```bash
-./install-prerequisites.sh
+bash install-prerequisites.sh
 ```
 
 Requires: Docker, Docker Compose, Node.js, AWS CLI (with dummy credentials for LocalStack)
