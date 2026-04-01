@@ -6,63 +6,32 @@ Uses Docker Compose + LocalStack to simulate AWS services entirely on your machi
 **Author**: Chetan Agrawal  
 **Website**: [www.awswithchetan.com](https://www.awswithchetan.com)
 
-## AWS Architecture
+> For AWS deployment, see the [ecommerce-web-app](https://github.com/awswithchetan/ecommerce-web-app) repo.
+
+## Architecture
+
+### AWS Reference Architecture
 <img width="800" height="450" alt="project-architecture" src="https://github.com/user-attachments/assets/b08a6351-e907-49aa-8c4b-4a796e301c15" />
 
-## Local deployment Architecture
-
-## What's Included
-
-- All 5 microservices (product, cart, user, order, notification)
-- LocalStack (DynamoDB, SNS, SQS, SES emulation)
-- PostgreSQL
-- Nginx (API Gateway simulator)
-- React frontend (run separately via npm)
+### Local Stack
+| AWS Service | Local Equivalent |
+|---|---|
+| DynamoDB | LocalStack |
+| SNS / SQS / SES | LocalStack |
+| RDS PostgreSQL | PostgreSQL container |
+| ALB + API Gateway | Nginx |
+| Cognito | Real AWS Cognito (free tier) |
 
 ## Quick Start
 
-### 1. Prerequisites
+1. **Install prerequisites** — `bash install-prerequisites.sh`
+2. **Set up Cognito** — create a User Pool in AWS Console
+3. **Configure frontend** — add your Cognito IDs to `frontend/react-app/src/aws-config.js`
+4. **Start backend** — `cd local-deployment && AWS_REGION=<region> docker compose up -d`
+5. **Load products** — `cd local-deployment/data && bash load-products-local.sh <region>`
+6. **Start frontend** — `cd frontend/react-app && npm install && npm start`
 
-```bash
-bash install-prerequisites.sh
-```
-
-Requires: Docker, Docker Compose, Node.js, AWS CLI (with dummy credentials for LocalStack)
-
-### 2. Configure
-
-```bash
-cp local-deployment/.env.example local-deployment/.env
-# Edit .env and set AWS_REGION (e.g. us-east-1)
-```
-
-### 3. Start services
-
-```bash
-cd local-deployment
-docker compose up --build
-```
-
-### 4. Load product data
-
-```bash
-cd local-deployment
-AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test ./data/load-products-local.sh us-east-1
-```
-
-### 5. Start frontend
-
-```bash
-cd frontend/react-app
-npm install
-npm start
-```
-
-Frontend runs at http://localhost:3000, API at http://localhost:8080/api
-
-## Notification Service
-
-Order notifications are written to `local-deployment/emails/` as text files instead of being emailed. Check that directory after placing an order.
+See [local-deployment/README.md](local-deployment/README.md) for detailed steps.
 
 ## Project Structure
 
@@ -73,13 +42,13 @@ ecommerce-local-app/
 │   ├── cart-service/
 │   ├── user-service/
 │   ├── order-service/
-│   └── notification-service/   # Polls SQS, saves emails to file
+│   └── notification-service/
 ├── frontend/
 │   └── react-app/
 ├── local-deployment/
 │   ├── docker-compose.yml
 │   ├── nginx.conf
-│   ├── localstack-init/        # Auto-creates DynamoDB tables, SNS, SQS on startup
-│   └── data/                   # Product data + load script
+│   ├── localstack-init/
+│   └── data/
 └── install-prerequisites.sh
 ```
