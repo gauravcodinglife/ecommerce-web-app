@@ -109,11 +109,13 @@ const awsConfig = {
 
 ```bash
 cd local-deployment
-AWS_REGION=<region> docker compose up -d
+AWS_REGION=<region> docker-compose up -d
 
 # Example:
-AWS_REGION=ap-south-1 docker compose up -d
+AWS_REGION=ap-south-1 docker-compose up -d
 ```
+
+> **Note:** Use `docker-compose` (v1) or `docker compose` (v2 plugin) depending on your Docker installation.
 
 > This may take 5-10 minutes on first run (image pulls + builds).
 
@@ -209,23 +211,23 @@ All APIs available at `http://localhost:8080/api`:
 
 ```bash
 # All services
-docker compose logs -f
+docker-compose logs -f
 
 # Specific service
-docker compose logs -f product-service
+docker-compose logs -f product-service
 ```
 
 ### Rebuild a Service
 
 ```bash
-docker compose up -d --build <service-name>
+docker-compose up -d --build <service-name>
 ```
 
 ### Access Databases
 
 ```bash
 # PostgreSQL
-docker compose exec postgres psql -U postgres -d ecommercedb
+docker-compose exec postgres psql -U postgres -d ecommercedb
 
 # DynamoDB (via AWS CLI)
 AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test \
@@ -245,7 +247,7 @@ AWS_ACCESS_KEY_ID=test AWS_SECRET_ACCESS_KEY=test \
 
 ```bash
 cd local-deployment
-docker compose down -v
+docker-compose down -v
 ```
 
 This removes all containers and volumes.
