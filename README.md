@@ -35,10 +35,6 @@ A fully functional eCommerce application running entirely on your local machine:
 
 All AWS services (DynamoDB, SNS, SQS, SES) run locally via LocalStack. Only Cognito uses real AWS (no cost for the usage in this tutorial).
 
-## Getting Started
-
-See [local-deployment/README.md](local-deployment/README.md) for step-by-step instructions.
-
 ## Project Structure
 
 ```
@@ -58,3 +54,7 @@ ecommerce-local-app/
 │   └── data/
 └── install-prerequisites.sh
 ```
+
+## Getting Started
+
+See [local-deployment/README.md](local-deployment/README.md) for step-by-step instructions.
