@@ -129,7 +129,10 @@ CONTAINER ID   IMAGE                                   PORTS
 
 ```bash
 cd local-deployment/data
-bash load-products-local.sh
+bash load-products-local.sh <region>
+
+# Example:
+bash load-products-local.sh ap-south-1
 ```
 
 This loads 20 sample products into local DynamoDB.

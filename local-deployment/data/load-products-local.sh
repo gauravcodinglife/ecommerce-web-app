@@ -7,15 +7,16 @@ set -e
 # Usage: ./load-products-local.sh <region>
 # Example: ./load-products-local.sh us-east-1
 
-if [ $# -ne 0 ]; then
-    echo "Usage: ./load-products-local.sh"
-    echo "Note: Region is fixed to us-east-1 to match LocalStack default"
+if [ $# -eq 0 ]; then
+    echo "Error: Region parameter is required"
+    echo "Usage: ./load-products-local.sh <region>"
+    echo "Example: ./load-products-local.sh us-east-1"
     exit 1
 fi
 
 TABLE_NAME="ecommerce-products"
 ENDPOINT="http://localhost:4566"
-REGION="us-east-1"
+REGION="$1"
 
 # Dummy credentials for LocalStack (no real AWS account needed)
 export AWS_ACCESS_KEY_ID=test
