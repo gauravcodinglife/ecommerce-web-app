@@ -33,7 +33,7 @@ A fully functional eCommerce application running entirely on your local machine:
 - Order Processing – Complete checkout flow
 - User Management – Authentication via Cognito
 - Email Notifications – Order confirmations via SES
-- 
+  
 <img width="800" height="864" alt="image" src="https://github.com/user-attachments/assets/9b010554-8823-4f8d-a2a3-4b4146620413" />
 
 
