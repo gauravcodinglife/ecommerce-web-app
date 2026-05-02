@@ -1,4 +1,6 @@
 eCommerce Application
+<img width="480" height="276" alt="image" src="https://github.com/user-attachments/assets/c238a48e-031a-4654-af5b-236df6b03cf2" />
+
 
 Local development environment for the eCommerce microservices application.
 Uses Docker Compose + LocalStack to simulate AWS services entirely on your machine.
