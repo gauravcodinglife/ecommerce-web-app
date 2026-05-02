@@ -33,6 +33,9 @@ A fully functional eCommerce application running entirely on your local machine:
 - Order Processing – Complete checkout flow
 - User Management – Authentication via Cognito
 - Email Notifications – Order confirmations via SES
+- 
+<img width="800" height="864" alt="image" src="https://github.com/user-attachments/assets/9b010554-8823-4f8d-a2a3-4b4146620413" />
+
 
 ---
  
@@ -199,7 +202,7 @@ This project is part of my **#100DaysOfCloudDevOps** challenge. Through this imp
 - ✅ Docker & Containerization – Multi-container applications with Docker Compose
 - ✅ AWS Services – DynamoDB, SNS, SQS, SES, RDS using LocalStack
 - ✅ Event-Driven Design – Asynchronous communication patterns
-- ✅ API Gateway** – Request routing and load balancing with Nginx
+- ✅ API Gateway – Request routing and load balancing with Nginx
 - ✅ Infrastructure as Code – Automating cloud resource provisioning
 - ✅ DevOps Practices – CI/CD pipelines, testing, and deployment strategies
 
