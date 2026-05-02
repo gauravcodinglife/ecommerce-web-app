@@ -213,7 +213,7 @@ Credits
 This project is based on the excellent AWS microservices architecture created by **Chetan Agrawal**.
 
 - Original Author: Chetan Agrawal
-- 
+
 All architectural design and original implementation credit goes to him. This is my hands-on learning implementation for local development.
 
 
