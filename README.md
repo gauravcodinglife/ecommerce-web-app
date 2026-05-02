@@ -1,5 +1,7 @@
 eCommerce Application
-<img width="480" height="276" alt="image" src="https://github.com/user-attachments/assets/c238a48e-031a-4654-af5b-236df6b03cf2" />
+---
+<img width="1280" height="736" alt="image" src="https://github.com/user-attachments/assets/b4c84517-8b51-4ad6-9866-eb0db42abe44" />
+
 
 
 Local development environment for the eCommerce microservices application.
