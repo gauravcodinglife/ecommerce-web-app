@@ -213,9 +213,7 @@ Credits
 This project is based on the excellent AWS microservices architecture created by **Chetan Agrawal**.
 
 - Original Author: Chetan Agrawal
-- Website: [www.awswithchetan.com](https://www.awswithchetan.com)
-- AWS Production Version: [ecommerce-web-app](https://github.com/awswithchetan/ecommerce-web-app)
-
+- 
 All architectural design and original implementation credit goes to him. This is my hands-on learning implementation for local development.
 
 
